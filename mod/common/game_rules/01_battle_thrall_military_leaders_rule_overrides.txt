@@ -53,6 +53,16 @@ can_generate_leader_from_species = {
 	}
 }
 
+# Modified: gestalts only get free upkeep on their node councilors
+# this = leader
+should_pay_for_leader_upkeep = {
+	NAND = {
+		exists = owner
+		owner = { is_gestalt = yes }
+		is_gestalt_node = yes
+	}
+}
+
 # Checks whether any leaders (scientists etc) can be formed from this pop
 # root = country
 # this = pop
