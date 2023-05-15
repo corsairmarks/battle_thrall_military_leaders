@@ -112,3 +112,23 @@ can_generate_military_leader_from_pop = {
 		owner = { btml_is_necrophage_empire = no }
 	}
 }
+
+# Modified: nothing yet - but soon I intend to give Rogue Servitors a special councilor
+# this = country
+can_country_change_councilors = {
+	is_gestalt = no
+}
+
+# Modified: gestalts only have node councilors not contribute to their cap, rather than all councilors
+# this = leader
+should_count_towards_leader_cap = {
+	NOR = {
+		leader_class = envoy
+		AND = {
+			owner = { is_gestalt = yes }
+			is_gestalt_node = yes
+			# We count all rulers as well
+			NOT = { is_ruler = yes }
+		}
+	}
+}
