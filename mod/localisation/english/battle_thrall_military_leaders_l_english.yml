@@ -5,5 +5,8 @@
  military_service_full_servitor_tooltip_delayed: "§LAlthough allowing Organic Advisors in military roles presents massive risks to our dear $pop_cat_bio_trophy_plural$, their effectiveness at chaos and violence cannot be denied.§!"
  military_service_full_default_tooltip: "Species can produce §H$ARMIES$§!, §H$GENERALS$§! and §H$ADMIRALS$§!."
  military_service_full_default_tooltip_delayed: "§LThey are doubtlessly among the most competent in our armed forces.§!"
+ councilor_machine_servitor: "Sanctuary Enrichment Coordinator"
+ councilor_machine_servitor_female: "$councilor_machine_servitor$"
+ councilor_machine_servitor_desc: "A unique position of leadership for a bio-trophy: overseeing the organization of bio-trophy sanctuaries and managing activity programmes."
  # missing base-game localisation
  effect_random_owned_pop_species: "$effect_random_owned_species$"

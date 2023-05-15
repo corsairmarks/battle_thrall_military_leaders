@@ -113,10 +113,49 @@ can_generate_military_leader_from_pop = {
 	}
 }
 
-# Modified: nothing yet - but soon I intend to give Rogue Servitors a special councilor
+# Modified: exclude gestalt rulers and nodes, not all councilors
+# this = leader
+can_leader_get_council_trait = {
+	NAND = {
+		exists = owner
+		owner = { is_gestalt = yes }
+		is_ruler = no
+		is_gestalt_node = no
+	}
+}
+
+# Modified: exclude gestalt rulers and nodes, not all councilors
+# this = leader
+can_leader_get_normal_trait = {
+	NOR = {
+		AND = {
+			exists = owner
+			owner = { is_gestalt = yes }
+			OR = {
+				is_ruler = yes
+				is_gestalt_node = yes
+			}
+		}
+		AND = {
+			is_ruler = yes
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_dictatorial
+					has_authority = auth_imperial
+				}
+			}
+		}
+	}
+}
+
+# Modified: rogue servitors can change their councilors
 # this = country
 can_country_change_councilors = {
-	is_gestalt = no
+	OR = {
+		is_gestalt = no
+		has_valid_civic = civic_machine_servitor
+	}
 }
 
 # Modified: gestalts only have node councilors not contribute to their cap, rather than all councilors

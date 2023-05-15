@@ -1,0 +1,13 @@
+# duplicates councilor_catalytic_processing
+councilor_machine_servitor = {
+	leader_class = { governor scientist }
+	is_leader_possible = {
+		is_robotic_species = no
+		leader_class = governor
+		leader_class = scientist
+	}
+	civic = civic_machine_servitor
+	modifier = {
+		planet_bio_trophies_unity_produces_mult = 0.05
+	}
+}

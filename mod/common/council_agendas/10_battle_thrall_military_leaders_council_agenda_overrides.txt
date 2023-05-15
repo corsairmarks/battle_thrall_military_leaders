@@ -1,0 +1,32 @@
+# variable matches the value defined in common/council_agendas/00_council_agendas.txt
+@base_agenda_cost = 7000
+
+# Modified: allowed for Rogue Servitors
+agenda_unlock_slot = {
+	agenda_cost = @base_agenda_cost
+	potential = {
+		has_paragon_dlc = yes
+		OR = {
+			is_gestalt = no
+			AND = {
+				has_valid_civic = civic_machine_servitor
+				has_unlocked_council_positions < 1
+			}
+		}
+		check_variable_arithmetic = {
+			which = value:country_num_unlockable_council_slots
+			value > 0
+		}
+	}
+	allow = { always = yes }
+	modifiers = {
+		{
+		}
+	}
+	effect = {
+		unlock_council_slots = 1
+	}
+	ai_weight = {
+		base = 9999
+	}
+}

@@ -1,0 +1,24 @@
+# Modified: civic_machine_servitor has an additional one
+# this = pop
+country_has_extra_council_position = {
+	if = {
+		limit = { has_valid_civic = civic_machine_servitor }
+		hidden_trigger = { always = yes }
+	}
+	else = {
+		if = {
+			limit = {
+				OR = {
+					has_civic = civic_galactic_sovereign
+					has_civic = civic_galactic_sovereign_megacorp
+					has_civic = civic_psionic_sovereign
+				}
+			}
+			civics_count > 3
+		}
+		else = {
+			civics_count > 2
+		}
+		is_gestalt = no
+	}
+}

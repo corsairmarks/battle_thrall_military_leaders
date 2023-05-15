@@ -1,0 +1,60 @@
+################################
+## GESTALT
+################################
+
+councilor_gestalt_governor = {
+	possible = { is_gestalt = yes }
+	leader_class = { governor }
+	is_leader_possible = {
+		leader_class = governor
+		has_leader_flag = councilor_gestalt_governor
+		is_robotic_species = yes
+	}
+	modifier = {
+		planet_pop_assembly_organic_mult = 0.03
+		planet_pop_assembly_mult = 0.03
+	}
+	icon = "GFX_icon_councilor_ruler"
+}
+
+councilor_gestalt_scientist = {
+	possible = { is_gestalt = yes }
+	leader_class = { scientist }
+	is_leader_possible = {
+		leader_class = scientist
+		has_leader_flag = councilor_gestalt_scientist
+		is_robotic_species = yes
+	}
+	modifier = {
+		all_technology_research_speed = 0.02
+	}
+	icon = "GFX_icon_councilor_research"
+}
+
+councilor_gestalt_admiral = {
+	possible = { is_gestalt = yes }
+	leader_class = { admiral }
+	is_leader_possible = {
+		leader_class = admiral
+		has_leader_flag = councilor_gestalt_admiral
+		is_robotic_species = yes
+	}
+	modifier = {
+		country_base_influence_produces_add = 0.1
+	}
+	icon = "GFX_icon_councilor_defense"
+}
+
+councilor_gestalt_general = {
+	possible = { is_gestalt = yes }
+	leader_class = { general }
+	is_leader_possible = {
+		leader_class = general
+		has_leader_flag = councilor_gestalt_general
+		is_robotic_species = yes
+	}
+	modifier = {
+		planet_crime_no_happiness_add = -3
+	}
+	icon = "GFX_icon_councilor_ruler"
+}

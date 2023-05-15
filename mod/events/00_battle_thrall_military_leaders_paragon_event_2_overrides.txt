@@ -1,0 +1,24 @@
+namespace = paragon_2
+
+# Modified:
+# * use trigger for is_gestalt
+# * explicitly applies to gestalt nodes
+country_event = {
+	id = paragon_2.2096
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_paragon_dlc = yes
+		is_gestalt = yes
+		exists = from
+		from = {
+			is_ruler = no
+			is_gestalt_node = yes
+		}
+	}
+	immediate = {
+		from = {
+			set_gestalt_node_protrait_effect = yes
+		}
+	}
+}
